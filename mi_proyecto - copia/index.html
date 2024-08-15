@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caribebank</title>
+    <link rel="icon" href="imangen/logo.png" type="imangen">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="imangen/logo.png" alt="CaribeBank logo"/>
+            <h1>CaribeBank</h1>
+        </div>
+        <div class="header-buttons">
+            <button id="openModalBtn">Abrir Cuenta</button>
+            <button>Iniciar Sesión</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Caribebank</h2>
+            <h3>Tu Banco Virtual De Confianza En El Caribe</h3>
+            <p>
+                En Caribebank, te ofrecemos una experiencia bancaria completamente digital, diseñada para facilitar tu vida.
+                Desde cuentas de ahorro y corrientes hasta inversiones y préstamos, tenemos todo lo que necesitas para gestionar
+                tus finanzas de manera eficiente y segura.
+            </p>
+        </section>
+
+        <section class="benefits">
+            <h3>Por Qué Elegir Caribebank?</h3>
+           
+            <div class="benefit">
+                <h4>Innovación y Comodidad</h4>
+                <ul>
+                    <li>Banca Digital 24/7: Accede a tus cuentas en cualquier momento y desde cualquier lugar.</li>
+                    <li>Aplicación Móvil Intuitiva: Gestiona tus finanzas con facilidad a través de nuestra app.</li>
+                </ul>
+            </div>
+           
+            <div class="benefit">
+                <h4>Seguridad y Confianza</h4>
+                <ul>
+                    <li>Protección de Datos Avanzada: Mantén tus transacciones y datos personales seguros.</li>
+                    <li>Autenticación Multifactor: Añade una capa extra de seguridad a tu cuenta.</li>
+                </ul>
+            </div>
+           
+            <div class="benefit">
+                <h4>Servicios Personalizados</h4>
+                <ul>
+                    <li>Atención al Cliente Dedicada: Nuestros expertos están disponibles para ayudarte cuando lo necesites.</li>
+                    <li>Soluciones Adaptadas: Ofrecemos productos financieros que se ajustan a tus necesidades individuales.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+
+<!-- Ventana flotante -->
+<!-- Ventana flotante -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span> <!-- Botón de cierre -->
+        <div class="header">
+            <img src="imangen/logo.png" alt="Caribebank Logo" class="logo">
+            <h1>Caribebank</h1>
+        </div>
+        <h2>Abrir Cuenta Digital</h2>
+        <form id="dataForm" action="backed.php">
+            <div class="form-row">
+                <input type="text" name="nombre" placeholder="Nombres" required>
+                <input type="text" name="apellido" placeholder="Apellidos" required>
+            </div>
+            <div class="form-row">
+
+                <select name="select">
+                <option value="" disabled selected>Tipo de Documento</option>
+                <option value="CC">Cedula de Ciudadania</option>
+                <option value="TI">Tarjeta de Identidad</option>
+                <option value="CE">Cedula de Extranjeria</option>
+                <option value="PP">Pasaporte</option>
+                </select>
+                
+                <input type="text" placeholder="Número de Documento" required>
+            </div>
+            <div class="form-row">
+                <input type="email" placeholder="Correo Electrónico" required>
+                <input type="email" placeholder="Confirmar Correo Electrónico" required>
+            </div>
+            <div class="form-row">
+                <input type="text" placeholder="Número de Celular" required>
+                <input type="text" placeholder="Fecha de Nacimiento" onfocus="(this.type='date')" onblur="(this.type='text')">
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+        <div class="checkbox-container">
+            <input type="checkbox" id="authorization" name="authorization" required>
+            <label for="authorization">Autorizo a CaribeBank para que el número de celular y el correo electrónico, sean tratados para contactarme y/o enviarme la información relacionada con la solicitud del producto y afines de la compañía</label>
+        </div>
+    </div>
+</div>
+
+
+
+    <script src="ventana.js"></script>
+
+
+</body>
+</html>
